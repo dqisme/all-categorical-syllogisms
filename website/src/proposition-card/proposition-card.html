@@ -1,0 +1,23 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+
+<dom-module id="proposition-card">
+  <template>
+    <style></style>
+    <paper-card heading="AAA-1"></paper-card>
+  </template>
+  <script src="../../node_modules/categorical-propositions/bundle.js"></script>
+  <script>
+    var Proposition = require('categorical-propositions').Proposition;
+    console.log(Proposition.types);
+    class PropositionCard extends Polymer.Element {
+      static get is() {
+        return 'proposition-card';
+      }
+      constructor() {
+        super();
+      }
+    }
+    window.customElements.define(PropositionCard.is, PropositionCard);
+  </script>
+</dom-module>

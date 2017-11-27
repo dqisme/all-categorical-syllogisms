@@ -1,0 +1,33 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/paper-card/paper-card.html">
+<link rel="import" href="../proposition-card/proposition-card.html">
+
+<dom-module id="categorical-propositions-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <proposition-card />
+  </template>
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class CategoricalPropositionsApp extends Polymer.Element {
+      static get is() { return 'categorical-propositions-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'categorical-propositions-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(CategoricalPropositionsApp.is, CategoricalPropositionsApp);
+  </script>
+</dom-module>

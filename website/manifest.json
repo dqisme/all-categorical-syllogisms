@@ -1,0 +1,7 @@
+{
+  "name": "categorical-propositions",
+  "short_name": "categorical-propositions",
+  "description": "Show all categorical propositions.",
+  "start_url": "/",
+  "display": "standalone"
+}
