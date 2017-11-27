@@ -1,0 +1,27 @@
+{
+  "name": "categorical-propositions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm run babel",
+    "start": "node example",
+    "babel": "babel src --out-dir lib",
+    "prepublish": "npm run babel"
+  },
+  "author": "dq",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-es2015": "6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  }
+}

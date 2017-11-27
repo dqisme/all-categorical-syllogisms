@@ -30,6 +30,7 @@ class Proposition {
       this.type = type;
       this.toString = toString;
     } catch(error) {
+      console.log(error);
       throw new Error('Invalid type of proposition');
     }
   }
@@ -52,4 +53,4 @@ Proposition.qualities = {
   negative: 'negative',
 };
 
-module.exports = Proposition;
+export default Proposition;

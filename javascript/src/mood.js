@@ -6,4 +6,4 @@ class Mood {
   }
 }
 
-module.exports = Mood;
+export default Mood;

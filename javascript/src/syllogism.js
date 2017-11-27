@@ -1,4 +1,4 @@
-const Proposition = require('./proposition');
+import Proposition from './proposition';
 
 class Syllogism {
   constructor(mood, figure, majorTerm, minorTerm, middleTerm) {
@@ -19,6 +19,7 @@ class Syllogism {
     this.minorPremise = new Proposition(minorPremiseSubject, minorPremisePredicate, minorPremiseType);
     this.conclusion = new Proposition(conclusionSubject, conclusionPredicate, conclusionType);
     } catch (error) {
+      console.log(error);
       throw new Error('Invalid figure of syllogism');
     }
   }
@@ -35,4 +36,4 @@ Syllogism.figures = {
   fourth: 4,
 };
 
-module.exports = Syllogism;
+export default Syllogism;
