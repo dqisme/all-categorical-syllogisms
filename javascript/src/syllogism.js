@@ -15,13 +15,18 @@ class Syllogism {
         [Syllogism.figures.third]: [middleTerm, majorTerm, middleTerm, minorTerm],
         [Syllogism.figures.fourth]: [majorTerm, middleTerm, middleTerm, minorTerm],
       }[figure];
-    this.majorPremise = new Proposition(majorPremiseSubject, majorPremisePredicate, majorPremiseType);
-    this.minorPremise = new Proposition(minorPremiseSubject, minorPremisePredicate, minorPremiseType);
-    this.conclusion = new Proposition(conclusionSubject, conclusionPredicate, conclusionType);
+      this.majorPremise = new Proposition(majorPremiseSubject, majorPremisePredicate, majorPremiseType);
+      this.minorPremise = new Proposition(minorPremiseSubject, minorPremisePredicate, minorPremiseType);
+      this.conclusion = new Proposition(conclusionSubject, conclusionPredicate, conclusionType);
     } catch (error) {
       console.log(error);
       throw new Error('Invalid figure of syllogism');
     }
+  }
+
+  get isValid() {
+    if (this.majorPremise) {}
+    return true;
   }
 
   toString() {

@@ -4,15 +4,19 @@
 <dom-module id="proposition-card">
   <template>
     <style></style>
-    <paper-card heading="AAA-1"></paper-card>
+    <paper-card heading="[[form]]"></paper-card>
   </template>
-  <script src="../../node_modules/categorical-propositions/bundle.js"></script>
   <script>
-    var Proposition = require('categorical-propositions').Proposition;
-    console.log(Proposition.types);
     class PropositionCard extends Polymer.Element {
       static get is() {
         return 'proposition-card';
+      }
+      static get properties() {
+        return {
+          form: {
+            type: String,
+          }
+        };
       }
       constructor() {
         super();

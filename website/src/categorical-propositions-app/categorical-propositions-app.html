@@ -1,6 +1,7 @@
 <link rel="import" href="../../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../proposition-card/proposition-card.html">
+<script src="../../bower_components/categorical-propositions/bundle.js"></script>
 
 <dom-module id="categorical-propositions-app">
   <template>
@@ -9,23 +10,13 @@
         display: block;
       }
     </style>
-    <proposition-card />
+    <proposition-card form="[[form]]"></proposition-card>
   </template>
   <script>
-    /**
-     * @customElement
-     * @polymer
-     */
+    const Proposition = require('categorical-propositions').Proposition;
     class CategoricalPropositionsApp extends Polymer.Element {
       static get is() { return 'categorical-propositions-app'; }
-      static get properties() {
-        return {
-          prop1: {
-            type: String,
-            value: 'categorical-propositions-app'
-          }
-        };
-      }
+      get form() { return Proposition.types.A }
     }
 
     window.customElements.define(CategoricalPropositionsApp.is, CategoricalPropositionsApp);

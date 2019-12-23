@@ -1,0 +1,17 @@
+{
+  "name": "categorical-propositions",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "dq"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/dqisme/all-categorical-syllogisms",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
